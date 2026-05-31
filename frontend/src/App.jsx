@@ -4,6 +4,7 @@ import { Timer as TimerIcon, History, LayoutDashboard } from 'lucide-react';
 import TimerPage from './pages/Timer';
 import HistoryPage from './pages/History';
 import DashboardPage from './pages/Dashboard';
+import FloatingDolls from './components/FloatingDolls';
 
 const Navigation = () => {
   const location = useLocation();
@@ -29,6 +30,7 @@ const Navigation = () => {
 const App = () => {
   return (
     <Router>
+      <FloatingDolls />
       <Navigation />
       <div className="container">
         <Routes>

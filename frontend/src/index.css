@@ -277,3 +277,35 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
+
+/* Floating Dolls */
+.floating-dolls-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-doll {
+  position: absolute;
+  animation: float linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+  user-select: none;
+  will-change: transform;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-60vh) rotate(15deg);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-15deg);
+  }
+}
